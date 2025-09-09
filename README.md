@@ -1,6 +1,6 @@
 # EIP-7702 CLI - Stateless Delegation Monitor
 
-A lightweight, stateless wrapper service for monitoring EIP-7702 delegation setup transactions across multiple EVM chains.
+A lightweight, stateless wrapper service for monitoring or sweeping EIP-7702 delegation setup transactions across multiple EVM chains.
 
 ## 🎯 What It Does
 
@@ -12,12 +12,16 @@ This CLI monitors blockchain networks for EIP-7702 delegation setup transactions
 - ✅ **Reports** findings via events (doesn't store anything)
 - ✅ **Handles** nested signature formats (BSC, etc.)
 
+## What to use it for
+
+By actively monitoring malicious EIP7702 delegations, you can potentially frontrun them by sweeping the wallets first right after the delegation happened.
+
 ## 📦 Installation
 
 ### As NPM Package
 
 ```bash
-npm install eip7702-cli
+npm install eip7702-delegation-tracker
 ```
 
 ### Local Development
@@ -59,7 +63,7 @@ This library does **NOT** include any default RPC endpoints. You must provide yo
 ### Basic Usage - Single Network
 
 ```javascript
-const { EIP7702Scanner } = require('eip7702-cli');
+const { EIP7702Scanner } = require('eip7702-delegation-tracker');
 
 // Initialize scanner with your RPC endpoint (REQUIRED)
 const scanner = new EIP7702Scanner(
@@ -85,7 +89,7 @@ await scanner.watchBlocks();
 ### Multi-Network Monitoring
 
 ```javascript
-const { MultiNetworkScanner } = require('eip7702-cli');
+const { MultiNetworkScanner } = require('eip7702-delegation-tracker');
 
 // Monitor multiple networks with required RPC endpoints
 const scanner = new MultiNetworkScanner(
@@ -121,7 +125,7 @@ await scanner.startMonitoring();
 ## 🎯 Real-World Example: Monitor Specific Contracts
 
 ```javascript
-const { MultiNetworkScanner } = require('eip7702-cli');
+const { MultiNetworkScanner } = require('eip7702-delegation-tracker');
 
 // Configure networks with custom RPC endpoints
 const scanner = new MultiNetworkScanner(
@@ -189,7 +193,7 @@ await scanner.startMonitoring();
 
 ```javascript
 const express = require('express');
-const { MultiNetworkScanner } = require('eip7702-cli');
+const { MultiNetworkScanner } = require('eip7702-delegation-tracker');
 
 const app = express();
 const scanner = new MultiNetworkScanner(['ethereum', 'bsc']);

@@ -1,7 +1,7 @@
 {
-  "name": "eip7702-cli",
-  "version": "1.1.0",
-  "description": "CLI tool for tracking and analyzing EIP-7702 delegation setup transactions on EVM chains",
+  "name": "eip7702-delegation-tracker",
+  "version": "1.0.0",
+  "description": "CLI tool for tracking and sweeping EIP-7702 delegation setup transactions on EVM chains",
   "main": "lib/index.js",
   "exports": {
     ".": {
@@ -57,12 +57,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/EIP7702-Tracker.git"
+    "url": "git+https://github.com/cryptotooldev/eip7702-delegation-tracker.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/EIP7702-Tracker/issues"
+    "url": "https://github.com/cryptotooldev/eip7702-delegation-tracker/issues"
   },
-  "homepage": "https://github.com/yourusername/EIP7702-Tracker#readme",
+  "homepage": "https://github.com/cryptotooldev/eip7702-delegation-tracker#readme",
   "files": [
     "lib/",
     "examples/",
