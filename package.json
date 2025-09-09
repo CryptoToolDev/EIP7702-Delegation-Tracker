@@ -1,0 +1,73 @@
+{
+  "name": "eip7702-cli",
+  "version": "1.1.0",
+  "description": "CLI tool for tracking and analyzing EIP-7702 delegation setup transactions on EVM chains",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.js"
+    },
+    "./scanner": "./lib/scanner.js",
+    "./multi": "./lib/multi-scanner.js"
+  },
+  "bin": {
+    "eip7702": "./index.js"
+  },
+  "scripts": {
+    "test": "node index.js --help",
+    "link": "npm link",
+    "unlink": "npm unlink",
+    "example:scan": "node examples/scan.js",
+    "example:watch": "node examples/watch.js",
+    "example:api": "node examples/api-server.js"
+  },
+  "keywords": [
+    "EIP-7702",
+    "EIP7702",
+    "delegation",
+    "authorization",
+    "blockchain",
+    "ethereum",
+    "BSC",
+    "arbitrum",
+    "base",
+    "optimism",
+    "polygon",
+    "cli",
+    "scanner",
+    "monitor",
+    "authority",
+    "web3",
+    "smart-contracts",
+    "EOA"
+  ],
+  "author": "DigiSec",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.3",
+    "commander": "^11.1.0",
+    "ethers": "^6.8.0",
+    "@ethersproject/rlp": "^5.8.0",
+    "ora": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/EIP7702-Tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/EIP7702-Tracker/issues"
+  },
+  "homepage": "https://github.com/yourusername/EIP7702-Tracker#readme",
+  "files": [
+    "lib/",
+    "examples/",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
