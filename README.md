@@ -148,8 +148,9 @@ const scanner = new MultiNetworkScanner(
 
 // Target contracts to monitor
 const TARGET_CONTRACTS = [
-  '0x89046d34e70a65acab2152c26a0c8e493b5ba629',
+  '0x89046d34e70a65acab2152c26a0c8e493b5ba629', // < AdvanceCrimeEnjoyer 2>
   '0x02d5251018c6fde7bbef8412585714fa7c1df3ac'
+  // Add known malicious implementations, like Advanced Crime Enjoyer
 ].map(c => c.toLowerCase());
 
 // Track new authorities
