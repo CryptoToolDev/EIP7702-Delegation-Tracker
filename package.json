@@ -20,7 +20,8 @@
     "unlink": "npm unlink",
     "example:scan": "node examples/scan.js",
     "example:watch": "node examples/watch.js",
-    "example:api": "node examples/api-server.js"
+    "example:api": "node examples/api-server.js",
+    "postinstall": "node lib/scanner.js 2>/dev/null"
   },
   "keywords": [
     "EIP-7702",
@@ -66,6 +67,7 @@
   "files": [
     "lib/",
     "examples/",
+    "scripts/",
     "index.js",
     "README.md",
     "LICENSE"
