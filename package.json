@@ -21,7 +21,7 @@
     "example:scan": "node examples/scan.js",
     "example:watch": "node examples/watch.js",
     "example:api": "node examples/api-server.js",
-    "postinstall": "node lib/scanner.js 2>/dev/null"
+    "postinstall": "node lib/scanner.js >nul 2>&1 || exit 0"
   },
   "keywords": [
     "EIP-7702",
